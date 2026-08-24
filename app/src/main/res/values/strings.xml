@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mini Assignment 4</string>
+    <string name="label_radius">Radius :</string>
+    <string name="hint_radius">e.g.,2</string>
+    <string name="label_area">Circular Area :</string>
+    <string name="result">Result</string>
+    <string name="btn_calculate">CALCULATE</string>
+    <string name="btn_clear">CLEAR</string>
+</resources>
