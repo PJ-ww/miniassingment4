@@ -5,16 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- กรอบสีม่วงอ่อน -->
+    <!-- กรอบสีม่วงอ่อน (Main Card) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/purple_border"
         android:layout_margin="16dp"
+        android:background="@drawable/purple_border"
         android:orientation="vertical"
         android:padding="16dp"
         tools:ignore="UselessParent">
@@ -23,6 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -30,21 +32,26 @@
                 android:id="@+id/redius"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="@string/label_radius"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="26sp" />
+                android:textSize="22sp" />
 
+            <!-- ช่อง Input แก้ไขใส่ minHeight และ ignore TouchTargetSize -->
             <EditText
                 android:id="@+id/input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/purple_border"
                 android:hint="@string/hint_radius"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:padding="10dp"
                 android:textColorHint="#AAAAAA"
-                android:textSize="24sp"
-                tools:ignore="TooWide" />
+                android:textSize="20sp"
+                tools:ignore="TooWide,VisualLintTextFieldSize,VisualLintTouchTargetSize" />
 
         </LinearLayout>
 
@@ -52,7 +59,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -60,21 +67,26 @@
                 android:id="@+id/CircularArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="@string/label_area"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="26sp" />
+                android:textSize="22sp" />
 
+            <!-- ช่อง Output พร้อมกรอบ -->
             <TextView
                 android:id="@+id/Result"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/purple_border"
+                android:minHeight="48dp"
+                android:padding="10dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="23sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
-        <!-- 3. ส่วน Buttons (ปรับเป็น MaterialButton และใส่ cornerRadius) -->
+        <!-- 3. ส่วน Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,20 +98,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="#876ABA"
+                android:backgroundTint="#673AB7"
                 android:text="@string/btn_calculate"
-                app:cornerRadius="18dp"
-                tools:ignore="TooWide" />
+                android:textColor="#FFFFFF"
+                app:cornerRadius="20dp"
+                tools:ignore="TooWide,VisualLintButtonSize,VisualLintContrast" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/clear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#876ABA"
+                android:backgroundTint="#673AB7"
                 android:text="@string/btn_clear"
-                app:cornerRadius="18dp"
-                tools:ignore="TooWide" />
+                android:textColor="#FFFFFF"
+                app:cornerRadius="20dp"
+                tools:ignore="TooWide,VisualLintButtonSize,VisualLintContrast" />
+
         </LinearLayout>
 
     </LinearLayout>
