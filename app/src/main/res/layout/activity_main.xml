@@ -5,12 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="100dp"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="16dp"
+    android:background="@drawable/bg_gradient"
     tools:context=".MainActivity">
 
+    <!-- โลโก้กลุ่ม -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/groupLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@drawable/logo"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/groupLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@drawable/logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
     <!-- กรอบสีม่วงอ่อน (Main Card) -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +49,51 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:ignore="UselessParent">
+
+
+        <!-- ส่วนของรูปภาพ 4 รูปด้านบน -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="Snake image"
+                android:scaleType="centerInside"
+                android:src="@drawable/snake" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="Jib image"
+                android:scaleType="centerInside"
+                android:src="@drawable/jib" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="Duck image"
+                android:scaleType="centerInside"
+                android:src="@drawable/duck" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:contentDescription="Kero image"
+                android:scaleType="centerInside"
+                android:src="@drawable/kero" />
+        </LinearLayout>
 
         <!-- 1. ส่วน Radius -->
         <LinearLayout
@@ -98,10 +173,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="#673AB7"
+                android:backgroundTint="#ffccdf"
                 android:text="@string/btn_calculate"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="20dp"
+                android:textColor="#60b0fb"
+                app:cornerRadius="8dp"
+                app:strokeColor="#60b0fb"
+                app:strokeWidth="1dp"
                 tools:ignore="TooWide,VisualLintButtonSize,VisualLintContrast" />
 
             <com.google.android.material.button.MaterialButton
@@ -109,10 +186,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#673AB7"
+                android:backgroundTint="#ffccdf"
                 android:text="@string/btn_clear"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="20dp"
+                android:textColor="#60b0fb"
+                app:cornerRadius="8dp"
+                app:strokeColor="#60b0fb"
+                app:strokeWidth="1dp"
                 tools:ignore="TooWide,VisualLintButtonSize,VisualLintContrast" />
 
         </LinearLayout>

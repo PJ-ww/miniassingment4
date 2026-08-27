@@ -7,7 +7,7 @@
     <!-- ความหนาและสีของเส้นขอบ (ม่วงอ่อน/ม่วงตามธีม) -->
     <stroke
         android:width="2dp"
-        android:color="#9C27B0" />
+        android:color="#60b0fb" />
 
     <!-- ความโค้งของมุมกรอบ (ใส่หรือไม่ใส่ก็ได้) -->
     <corners android:radius="4dp" />
